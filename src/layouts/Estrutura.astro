@@ -1,0 +1,33 @@
+---
+import CarIcon from '../components/ui/Car-icon.astro'
+import Dash from '../components/ui/Dash.astro'
+import Logo from '../components/ui/Logo.astro'
+import UserIcon from '../components/ui/User-icon.astro'
+import FlagIcon from '../components/ui/Flag-icon.astro'
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Alugcar - Reserve Seu Carro Agora!</title>
+	</head>
+	<body class="bg-Blue h-screen w-full">
+		<div class="mx-auto mb-[56px] mt-[48px] flex w-[1200px] gap-[87px]">
+			<aside class="flex flex-col">
+				<Logo />
+				<div class="flex flex-col items-center justify-center space-y-8">
+					<CarIcon />
+					<Dash />
+					<UserIcon />
+					<Dash />
+					<FlagIcon />
+				</div>
+			</aside>
+			<div class="bg-WhiteLight min-w-[976px] rounded-[16px]">
+				<slot />
+			</div>
+		</div>
+	</body>
+</html>
