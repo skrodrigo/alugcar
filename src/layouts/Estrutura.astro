@@ -13,11 +13,11 @@ import FlagIcon from '../components/ui/Flag-icon.astro'
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Alugcar - Reserve Seu Carro Agora!</title>
 	</head>
-	<body class="bg-Blue h-screen w-full">
-		<div class="mx-auto mb-[56px] mt-[48px] flex w-[1200px] gap-[87px]">
-			<aside class="flex flex-col">
+	<body class="h-screen w-full bg-Blue">
+		<div class="flex h-full w-full items-center justify-center gap-24">
+			<aside class="flex flex-col space-y-24">
 				<Logo />
-				<div class="flex flex-col items-center justify-center space-y-8">
+				<div class="flex flex-col items-center justify-center space-y-4">
 					<CarIcon />
 					<Dash />
 					<UserIcon />
@@ -25,7 +25,8 @@ import FlagIcon from '../components/ui/Flag-icon.astro'
 					<FlagIcon />
 				</div>
 			</aside>
-			<div class="bg-WhiteLight min-w-[976px] rounded-[16px]">
+			<div class="h-2/3 w-8/12 overflow-auto rounded-[16px] bg-WhiteLight">
+				<h1>Selecione o Carro</h1>
 				<slot />
 			</div>
 		</div>

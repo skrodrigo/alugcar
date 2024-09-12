@@ -1,0 +1,48 @@
+---
+import Baggage from '../ui/Baggage.astro'
+import Transmission from '../ui/Transmission.astro'
+
+const { car, category, imageSrc, daily_price, total_price, transmission, baggage_capacity } =
+	Astro.props
+---
+
+<div class="mx-auto my-5 flex max-w-3xl overflow-hidden rounded-lg bg-White shadow-md">
+	<div class="flex w-2/5 items-center justify-center">
+		<img src={imageSrc} alt={car} class="max-h-48 max-w-full object-contain" />
+	</div>
+	<div class="flex flex-1 flex-col p-6">
+		<div>
+			<h2 class="text-2xl font-semibold text-DarkBlue">{car}</h2>
+			<p class="mt-1 text-sm text-Gray">{category}</p>
+		</div>
+		<div class="mt-6 flex justify-between">
+			<div class="text-center">
+				<span class="block text-lg font-bold text-DarkBlue">{daily_price}</span>
+				<span class="text-xs text-Gray">valor diário</span>
+			</div>
+			<div class="text-center">
+				<span class="block text-lg font-bold text-DarkBlue">01</span>
+				<span class="text-xs text-Gray">dia(s)</span>
+			</div>
+			<div class="text-center">
+				<span class="block text-lg font-bold text-DarkBlue">{total_price}</span>
+				<span class="text-xs text-Gray">valor total</span>
+			</div>
+		</div>
+		<div class="mt-6 flex space-x-4">
+			<div class="flex items-center gap-2 text-sm text-Gray">
+				<Transmission />
+				<span>{transmission}</span>
+			</div>
+			<div class="flex items-center gap-2 text-sm text-Gray">
+				<Baggage />
+				<span>{baggage_capacity}</span>
+			</div>
+		</div>
+		<button
+			class="ml-auto mt-auto rounded bg-yellow-500 px-6 py-2 text-white transition-colors hover:bg-yellow-600"
+		>
+			Reservar
+		</button>
+	</div>
+</div>
