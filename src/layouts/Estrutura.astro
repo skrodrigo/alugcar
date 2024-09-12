@@ -18,15 +18,20 @@ import FlagIcon from '../components/ui/Flag-icon.astro'
 			<aside class="flex flex-col space-y-24">
 				<Logo />
 				<div class="flex flex-col items-center justify-center space-y-4">
-					<CarIcon />
+					<a href="/">
+						<CarIcon  />
+					</a>
 					<Dash />
-					<UserIcon />
+					<a href="/cadastrar-credenciais">
+						<UserIcon />
+					</a>
 					<Dash />
-					<FlagIcon />
+					<a href="/finalizar-pedido">
+						<FlagIcon />
+					</a>
 				</div>
 			</aside>
 			<div class="h-3/4 w-8/12 space-y-6 overflow-auto rounded-[16px] bg-WhiteLight p-14">
-				<h1 class="mx-auto flex max-w-5xl text-2xl font-bold">Selecione o Carro</h1>
 				<slot />
 			</div>
 		</div>
